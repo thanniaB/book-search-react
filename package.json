@@ -1,0 +1,45 @@
+{
+  "name": "book-search",
+  "version": "0.1.0",
+  "author": "thannia blanchet",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "sass": "^1.22.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "sass": "sass src/css/style.scss src/css/style.css",
+    "build-css": "node-sass --include-path scss src/css/style.scss src/css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\" "
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1"
+  }
+}

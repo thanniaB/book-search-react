@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+  }
+  
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.row-to-column {
+    flex-direction: row;
+}
+
+@media (max-width: 512px) {
+    .row-to-column {
+        flex-direction: column;
+    }
+  }

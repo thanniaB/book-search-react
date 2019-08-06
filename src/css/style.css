@@ -1,0 +1,133 @@
+@charset "UTF-8";
+.flex {
+  display: flex; }
+
+.space-between {
+  justify-content: space-between; }
+
+.flex-row {
+  flex-direction: row; }
+
+.row-to-column {
+  flex-direction: row; }
+
+@media (max-width: 512px) {
+  .row-to-column {
+    flex-direction: column; } }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  background-image: url("img/dynamic-style.png"); }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration-line: none; }
+
+a:visited {
+  color: inherit; }
+
+#root {
+  width: 70%;
+  margin: 0 auto; }
+
+.search-form {
+  margin-top: 192px;
+  font-size: 1.5em; }
+  .search-form input {
+    font-size: 17px;
+    padding: 5px; }
+  .search-form input,
+  .search-form > div {
+    width: 100%;
+    border: 3px solid #56261d;
+    height: 57px; }
+  .search-form > div {
+    justify-content: flex-end;
+    align-items: center; }
+  .search-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #e2ddcc;
+    border-color: #56261d;
+    border-left-width: 3px;
+    margin-left: 11px;
+    border-radius: 0;
+    padding: 5px 25px; }
+  .search-form span {
+    font-style: italic; }
+  .search-form button {
+    background-color: #56261d;
+    color: white;
+    border: none;
+    width: 30%; }
+  .search-form select,
+  .search-form button {
+    height: 100%; }
+  .search-form input,
+  .search-form select,
+  .search-form button {
+    font-size: 1em; }
+
+.search-results {
+  margin-top: 0;
+  padding-left: 0; }
+  .search-results li {
+    background-color: #301510;
+    border: 3px solid #56261d;
+    width: 100%;
+    color: white;
+    padding: 11px; }
+    .search-results li img {
+      width: 128px;
+      margin-right: 11px; }
+    .search-results li .author {
+      font-style: italic; }
+
+.book .back-button {
+  color: #56261d;
+  font-weight: bold; }
+  .book .back-button:before {
+    content: "←"; }
+
+.book img {
+  width: 288px;
+  margin: 0 11px 11px 0; }
+
+.book h2 {
+  margin-top: 0;
+  font-style: italic; }
+
+.book .isbn {
+  color: #4d4d4d;
+  font-style: italic; }
+
+@media (min-width: 967px) {
+  .book {
+    margin-right: 30%; } }
+
+@media (max-width: 768px) {
+  .search-form {
+    margin-top: 0; }
+  .book img {
+    width: 192px; } }
+
+@media (max-width: 512px) {
+  .search-form > div {
+    padding-top: 5px;
+    height: 100%;
+    text-align: left;
+    align-items: flex-start; }
+    .search-form > div select {
+      margin: 5px 0 0; }
+    .search-form > div select,
+    .search-form > div button {
+      width: 100%; }
+  .book img {
+    width: 128px; } }

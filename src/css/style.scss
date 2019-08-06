@@ -1,0 +1,183 @@
+@import "helper-classes.scss";
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$pattern-url: "img/dynamic-style.png";
+$padding-small: 5px;
+$padding-medium: 11px;
+$padding-large: 25px;
+$shelve-height: 57px;
+$shelve-color: #56261d;
+$shelve-border: 3px solid $shelve-color;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-image: url($pattern-url);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+#root {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.search-form {
+  margin-top: 192px;
+  font-size: 1.5em;
+
+  input {
+    font-size: 17px;
+    padding: $padding-small;
+  }
+
+  input,
+  > div {
+    width: 100%;
+    border: $shelve-border;
+    height: $shelve-height;
+  }
+
+  > div {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #e2ddcc;
+    border-color: $shelve-color;
+    border-left-width: 3px;
+    margin-left: $padding-medium;
+    border-radius: 0;
+    padding: $padding-small $padding-large;
+  }
+
+  span {
+    font-style: italic;
+  }
+
+  button {
+    background-color: $shelve-color;
+    color: white;
+    border: none;
+    width: 30%;
+  }
+
+  select,
+  button {
+    height: 100%;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 1em;
+  }
+}
+
+.search-results {
+  margin-top: 0;
+  padding-left: 0;
+
+  li {
+    background-color: darken($shelve-color, 10%);
+    border: $shelve-border;
+    width: 100%;
+    color: white;
+    padding: $padding-medium;
+
+    img {
+      width: 128px;
+      margin-right: $padding-medium;
+    }
+
+    .author {
+      font-style: italic;
+    }
+  }
+}
+
+.book {
+  .back-button {
+    color: $shelve-color;
+    font-weight: bold;
+    &:before {
+      content: "←";
+    }
+  }
+
+  img {
+    width: 288px;
+    margin: 0 $padding-medium $padding-medium 0;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-style: italic;
+  }
+
+  .isbn {
+    color: lighten($primary-color, 10%);
+    font-style: italic;
+  }
+}
+
+@media (min-width: 967px) {
+
+  .book {
+    margin-right: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    margin-top: 0;
+  }
+  .book {
+    img {
+      width: 192px;
+    }
+  }
+}
+
+@media (max-width: 512px) {
+  .search-form > div {
+    padding-top: $padding-small;
+    height: 100%;
+    text-align: left;
+    align-items: flex-start;
+
+    select {
+      margin: $padding-small 0 0;
+    }
+
+    select,
+    button {
+      width: 100%;
+    }
+  }
+
+  .book {
+    img {
+      width: 128px;
+    }
+  }
+}
